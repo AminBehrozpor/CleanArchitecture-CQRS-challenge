@@ -22,16 +22,15 @@ namespace Ordering.Infrastructure.Persistence
                 {
                     case EntityState.Added:
                         entry.Entity.CreateDate = DateTime.Now;
-                        entry.Entity.CreatedBy = "mohammad";
                         break;
                     case EntityState.Modified:
                         entry.Entity.ModifiedDate = DateTime.Now;
-                        entry.Entity.LastModifiedBy = "mohammad";
                         break;
                 }
             }
 
             return base.SaveChangesAsync(cancellationToken);
         }
+
     }
 }
